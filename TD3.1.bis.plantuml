@@ -1,0 +1,15 @@
+@startuml
+
+' definitions
+' -----------
+hide circle
+hide empty methods
+hide empty attributes
+
+usecase r as "Recenser les \n demandes de stage"
+
+actor Inconnu
+
+Inconnu -> r
+
+@enduml
