@@ -1,0 +1,142 @@
+@startuml Demo
+hide circle
+hide empty members
+hide empty methods
+skinparam roundcorner 5
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Chien
+{
+    numéro
+    race
+    nom
+   
+
+}
+
+class Propriétaire
+{
+
+
+}
+
+class Race
+{
+   Boxer 
+   Berger allemand 
+   Labrador 
+   Chihuahua 
+   Golden retriver 
+   Bouvier des flandres 
+   Husky 
+   Shiba inu 
+   Chowchow 
+   
+
+}
+
+class Concours 
+{
+
+
+
+}
+
+class Participation
+{
+    classement
+}
+
+class Ville
+{
+
+}
+
+class Organisation
+{
+    date
+}
+
+class Possession
+{
+ adresse propriétaire
+    date possession
+}
+
+
+
+Chien "1..*" -- "0..10" Propriétaire : Possède
+Chien "1" -- "1..*" Race : Possède
+Chien "1..*" -- "0..10" Concours : Participer
+Concours "0..*" -- "0..*" Ville 
+
+(Chien, Concours) . Participation
+(Concours, Ville). Organisation
+(Chien, Propriétaire). Possession
+
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
